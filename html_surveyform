@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 페이지</title>
+</head>
+<body>
+    <h1>설문조사</h1>
+    <form id="surveyForm">
+        <!-- 1. 이름 작성 -->
+        <label>1. 이름을 작성해주세요.</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <!-- 2. D동 집합 여부 -->
+        <label>2. 8월 29일 목요일 오후 5시쯤에 D동으로 집합 가능한가요?</label><br>
+        <input type="radio" name="gather" value="예" required> 예<br>
+        <input type="radio" name="gather" value="아니오" required> 아니오<br><br>
+
+        <!-- 3. 글램핑장 고기 굽기 여부 -->
+        <label>3. 글램핑장에서 고기 굽는 것에 참여 가능하신가요?</label><br>
+        <input type="radio" name="bbq" value="예" required> 예<br>
+        <input type="radio" name="bbq" value="아니오" required> 아니오<br><br>
+
+        <!-- 4. 기타 의견 -->
+        <label>4. 기타 의견을 자유롭게 작성해주세요.</label><br>
+        <textarea id="opinion"></textarea><br><br>
+
+        <button type="button" onclick="submitForm()">제출</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
